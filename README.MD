@@ -24,7 +24,7 @@ The goal is to practice Object-oriented design using the programming language Ja
 
 ## Part Two:
 
-Damn it, you have finished your work but there are always changes in live.
+Damn it, you have finished your work but there are always changes in life.
 Some people want to play Rock-paper-scissors-spock-lizard now.
 
 We have additional rules:
