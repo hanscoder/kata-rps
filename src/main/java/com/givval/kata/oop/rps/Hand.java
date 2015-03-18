@@ -18,10 +18,6 @@ public class Hand implements Shape {
         rule.evaluate(oponent, result);
     }
 
-    private void evaluate(Shape oponent, Result result) {
-        rule.evaluate(oponent, result);
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
