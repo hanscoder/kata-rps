@@ -5,4 +5,6 @@ public interface Result {
     void hasBeenTied();
 
     void hasWon();
+
+    void hasLost();
 }

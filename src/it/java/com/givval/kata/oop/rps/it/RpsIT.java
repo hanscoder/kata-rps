@@ -33,4 +33,16 @@ public class RpsIT {
 
         verify(result).hasWon();
     }
+
+    @Test
+    public void rock_looses_against_paper() {
+        GameBox box = new GameBox();
+        Shape rock = box.rock();
+        Shape paper = box.paper();
+        Result result = Mockito.mock(Result.class);
+
+        rock.tryToBeat(paper, result);
+
+        verify(result).hasLost();
+    }
 }
