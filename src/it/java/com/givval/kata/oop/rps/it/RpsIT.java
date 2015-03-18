@@ -66,6 +66,15 @@ public class RpsIT {
         verify(result).hasLost();
     }
 
+    @Test
+    public void paper_beats_rock() {
+        Result result = Mockito.mock(Result.class);
+
+        paper().tryToBeat(rock(), result);
+
+        verify(result).hasWon();
+    }
+
     private Shape rock() {
         return box.rock();
     }
