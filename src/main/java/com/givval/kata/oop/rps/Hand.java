@@ -9,7 +9,7 @@ public class Hand implements Shape {
         name = aName;
     }
 
-    public void add(Rule aRule) {
+    public void follow(Rule aRule) {
         rule = aRule;
     }
 

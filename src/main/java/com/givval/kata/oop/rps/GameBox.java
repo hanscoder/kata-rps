@@ -7,7 +7,7 @@ public class GameBox {
     private final Hand rock = new Hand("rock");
 
     public GameBox() {
-        rock.add(tiedAgainst(rock));
+        rock.follow(tiedAgainst(rock));
     }
 
     public Shape rock() {
