@@ -45,4 +45,16 @@ public class RpsIT {
 
         verify(result).hasLost();
     }
+
+    @Test
+    public void scissor_beats_against_paper() {
+        GameBox box = new GameBox();
+        Shape scissors = box.scissors();
+        Shape paper = box.paper();
+        Result result = Mockito.mock(Result.class);
+
+        scissors.tryToBeat(paper, result);
+
+        verify(result).hasWon();
+    }
 }
