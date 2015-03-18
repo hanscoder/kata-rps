@@ -10,51 +10,53 @@ import static org.mockito.Mockito.verify;
 
 public class RpsIT {
 
+    private GameBox box = new GameBox();
+
     @Test
     public void rock_against_rock_leads_to_a_tied_game() {
-        GameBox box = new GameBox();
-        Shape rock1 = box.rock();
-        Shape rock2 = box.rock();
         Result result = Mockito.mock(Result.class);
 
-        rock1.tryToBeat(rock2, result);
+        rock().tryToBeat(rock(), result);
 
         verify(result).hasBeenTied();
     }
 
     @Test
     public void rock_beats_scissors() {
-        GameBox box = new GameBox();
-        Shape rock = box.rock();
-        Shape scissors = box.scissors();
         Result result = Mockito.mock(Result.class);
 
-        rock.tryToBeat(scissors, result);
+        rock().tryToBeat(scissors(), result);
 
         verify(result).hasWon();
     }
 
     @Test
     public void rock_looses_against_paper() {
-        GameBox box = new GameBox();
-        Shape rock = box.rock();
-        Shape paper = box.paper();
         Result result = Mockito.mock(Result.class);
 
-        rock.tryToBeat(paper, result);
+        rock().tryToBeat(paper(), result);
 
         verify(result).hasLost();
     }
 
     @Test
     public void scissor_beats_against_paper() {
-        GameBox box = new GameBox();
-        Shape scissors = box.scissors();
-        Shape paper = box.paper();
         Result result = Mockito.mock(Result.class);
 
-        scissors.tryToBeat(paper, result);
+        scissors().tryToBeat(paper(), result);
 
         verify(result).hasWon();
+    }
+
+    private Shape rock() {
+        return box.rock();
+    }
+
+    private Shape paper() {
+        return box.paper();
+    }
+
+    private Shape scissors() {
+        return box.scissors();
     }
 }
