@@ -1,4 +1,7 @@
-package com.givval.kata.oop.rps;
+package com.givval.kata.oop.rps.rule;
+
+import com.givval.kata.oop.rps.Result;
+import com.givval.kata.oop.rps.Shape;
 
 public class TiedAgainst implements Rule {
     private final Shape oponent;

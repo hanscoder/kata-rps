@@ -1,9 +1,9 @@
 package com.givval.kata.oop.rps;
 
-import static com.givval.kata.oop.rps.Beats.beats;
-import static com.givval.kata.oop.rps.LooseAgainstAll.looseAgainstAll;
-import static com.givval.kata.oop.rps.Rules.rules;
-import static com.givval.kata.oop.rps.TiedAgainst.tiedAgainst;
+import static com.givval.kata.oop.rps.rule.Beats.beats;
+import static com.givval.kata.oop.rps.rule.LooseAgainstAll.looseAgainstAll;
+import static com.givval.kata.oop.rps.rule.Rules.rules;
+import static com.givval.kata.oop.rps.rule.TiedAgainst.tiedAgainst;
 
 public class GameBox {
 

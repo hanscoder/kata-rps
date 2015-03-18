@@ -1,6 +1,8 @@
 package com.givval.kata.oop.rps;
 
-public class Hand implements Shape {
+import com.givval.kata.oop.rps.rule.Rule;
+
+class Hand implements Shape {
 
     private final String name;
     private Rule rule = doNothing();

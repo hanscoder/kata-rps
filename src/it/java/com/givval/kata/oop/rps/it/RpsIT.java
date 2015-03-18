@@ -11,11 +11,10 @@ import static org.mockito.Mockito.verify;
 public class RpsIT {
 
     private GameBox box = new GameBox();
+    private Result result = Mockito.mock(Result.class);
 
     @Test
     public void rock_against_rock_leads_to_a_tied_game() {
-        Result result = Mockito.mock(Result.class);
-
         rock().tryToBeat(rock(), result);
 
         verify(result).hasBeenTied();
@@ -23,8 +22,6 @@ public class RpsIT {
 
     @Test
     public void rock_beats_scissors() {
-        Result result = Mockito.mock(Result.class);
-
         rock().tryToBeat(scissors(), result);
 
         verify(result).hasWon();
@@ -32,8 +29,6 @@ public class RpsIT {
 
     @Test
     public void rock_looses_against_paper() {
-        Result result = Mockito.mock(Result.class);
-
         rock().tryToBeat(paper(), result);
 
         verify(result).hasLost();
@@ -41,8 +36,6 @@ public class RpsIT {
 
     @Test
     public void scissor_beats_against_paper() {
-        Result result = Mockito.mock(Result.class);
-
         scissors().tryToBeat(paper(), result);
 
         verify(result).hasWon();
@@ -50,8 +43,6 @@ public class RpsIT {
 
     @Test
     public void scissors_against_scissors_leads_to_a_tied_game() {
-        Result result = Mockito.mock(Result.class);
-
         scissors().tryToBeat(scissors(), result);
 
         verify(result).hasBeenTied();
@@ -59,8 +50,6 @@ public class RpsIT {
 
     @Test
     public void scissors_looses_against_rock() {
-        Result result = Mockito.mock(Result.class);
-
         scissors().tryToBeat(rock(), result);
 
         verify(result).hasLost();
@@ -68,8 +57,6 @@ public class RpsIT {
 
     @Test
     public void paper_beats_rock() {
-        Result result = Mockito.mock(Result.class);
-
         paper().tryToBeat(rock(), result);
 
         verify(result).hasWon();
@@ -77,8 +64,6 @@ public class RpsIT {
 
     @Test
     public void paper_against_paper_leads_to_a_tied_game() {
-        Result result = Mockito.mock(Result.class);
-
         paper().tryToBeat(paper(), result);
 
         verify(result).hasBeenTied();
@@ -86,8 +71,6 @@ public class RpsIT {
 
     @Test
     public void paper_looses_against_scissors() {
-        Result result = Mockito.mock(Result.class);
-
         paper().tryToBeat(scissors(), result);
 
         verify(result).hasLost();
