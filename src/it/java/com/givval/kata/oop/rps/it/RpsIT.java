@@ -75,6 +75,15 @@ public class RpsIT {
         verify(result).hasWon();
     }
 
+    @Test
+    public void paper_against_paper_leads_to_a_tied_game() {
+        Result result = Mockito.mock(Result.class);
+
+        paper().tryToBeat(paper(), result);
+
+        verify(result).hasBeenTied();
+    }
+
     private Shape rock() {
         return box.rock();
     }
