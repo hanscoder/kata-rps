@@ -48,6 +48,15 @@ public class RpsIT {
         verify(result).hasWon();
     }
 
+    @Test
+    public void scissors_against_scissors_leads_to_a_tied_game() {
+        Result result = Mockito.mock(Result.class);
+
+        scissors().tryToBeat(scissors(), result);
+
+        verify(result).hasBeenTied();
+    }
+
     private Shape rock() {
         return box.rock();
     }

@@ -13,7 +13,7 @@ public class GameBox {
 
     public GameBox() {
         rock.follow(rules(beats(scissors), tiedAgainst(rock), looseAgainstAll()));
-        scissors.follow(rules(beats(paper)));
+        scissors.follow(rules(beats(paper), tiedAgainst(scissors)));
     }
 
     public Shape rock() {
