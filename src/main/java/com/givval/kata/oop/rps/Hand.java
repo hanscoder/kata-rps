@@ -3,7 +3,7 @@ package com.givval.kata.oop.rps;
 public class Hand implements Shape {
 
     private final String name;
-    private Rule rule;
+    private Rule rule = doNothing();
 
     public Hand(String aName) {
         name = aName;
@@ -16,6 +16,15 @@ public class Hand implements Shape {
     @Override
     public void tryToBeat(Shape oponent, Result result) {
         rule.evaluate(oponent, result);
+    }
+
+    private Rule doNothing() {
+        return new Rule() {
+            @Override
+            public void evaluate(Shape oponent, Result result) {
+                // donnothing
+            }
+        };
     }
 
     @Override

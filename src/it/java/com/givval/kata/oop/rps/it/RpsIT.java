@@ -21,4 +21,16 @@ public class RpsIT {
 
         verify(result).hasBeenTied();
     }
+
+    @Test
+    public void rock_beats_scissors() {
+        GameBox box = new GameBox();
+        Shape rock = box.rock();
+        Shape scissors = box.scissors();
+        Result result = Mockito.mock(Result.class);
+
+        rock.tryToBeat(scissors, result);
+
+        verify(result).hasWon();
+    }
 }
