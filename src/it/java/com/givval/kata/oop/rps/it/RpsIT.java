@@ -140,6 +140,13 @@ public class RpsIT {
     }
 
     @Test
+    public void lizard_against_lizard_leads_to_a_tied_game() {
+        lizard().tryToBeat(lizard(), result);
+
+        verify(result).hasBeenTied();
+    }
+
+    @Test
     public void lizard_beats_spock() {
         lizard().tryToBeat(spock(), result);
 
