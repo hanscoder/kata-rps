@@ -5,7 +5,7 @@ import com.givval.kata.oop.rps.Shape;
 
 public class LooseAgainstAll implements Rule {
 
-    public static Rule looseAgainstAll() {
+    public static Rule looseAgainstTheRest() {
         return new LooseAgainstAll();
     }
 
