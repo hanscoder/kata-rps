@@ -153,6 +153,20 @@ public class RpsIT {
         verify(result).hasWon();
     }
 
+    @Test
+    public void lizard_loose_against_rock() {
+        lizard().tryToBeat(rock(), result);
+
+        verify(result).hasLost();
+    }
+
+    @Test
+    public void lizard_loose_against_scissors() {
+        lizard().tryToBeat(scissors(), result);
+
+        verify(result).hasLost();
+    }
+
     private Shape spock() {
         return box.spock();
     }
