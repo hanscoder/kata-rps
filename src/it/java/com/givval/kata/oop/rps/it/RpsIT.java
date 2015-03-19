@@ -70,6 +70,13 @@ public class RpsIT {
     }
 
     @Test
+    public void paper_beats_spock() {
+        paper().tryToBeat(spock(), result);
+
+        verify(result).hasWon();
+    }
+
+    @Test
     public void paper_against_paper_leads_to_a_tied_game() {
         paper().tryToBeat(paper(), result);
 
