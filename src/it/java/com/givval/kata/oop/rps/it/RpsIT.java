@@ -42,6 +42,13 @@ public class RpsIT {
     }
 
     @Test
+    public void scissor_beats_against_lizard() {
+        scissors().tryToBeat(lizard(), result);
+
+        verify(result).hasWon();
+    }
+
+    @Test
     public void scissors_against_scissors_leads_to_a_tied_game() {
         scissors().tryToBeat(scissors(), result);
 
