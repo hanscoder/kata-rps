@@ -14,6 +14,10 @@ public class ShapeSelection {
     private final Hand spock = new Hand("spock");
 
     public ShapeSelection() {
+        explainRulesToHands();
+    }
+
+    private void explainRulesToHands() {
         rock.follow(rulesInOrder(beats(scissors), beats(lizard), tiedAgainst(rock), looseAgainstTheRest()));
         scissors.follow(rulesInOrder(beats(paper), beats(lizard), tiedAgainst(scissors), looseAgainstTheRest()));
         paper.follow(rulesInOrder(beats(rock), beats(spock), tiedAgainst(paper), looseAgainstTheRest()));
