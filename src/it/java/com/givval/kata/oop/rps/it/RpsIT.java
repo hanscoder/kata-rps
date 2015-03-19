@@ -139,6 +139,13 @@ public class RpsIT {
         verify(result).hasWon();
     }
 
+    @Test
+    public void lizard_beats_spock() {
+        lizard().tryToBeat(spock(), result);
+
+        verify(result).hasWon();
+    }
+
     private Shape spock() {
         return box.spock();
     }
