@@ -83,6 +83,17 @@ public class RpsIT {
         verify(result).hasWon();
     }
 
+    @Test
+    public void spock_beats_lizard() {
+        spock().tryToBeat(lizard(), result);
+
+        verify(result).hasWon();
+    }
+
+    private Shape spock() {
+        return box.spock();
+    }
+
     private Shape lizard() {
         return box.lizard();
     }

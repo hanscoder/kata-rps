@@ -11,11 +11,13 @@ public class GameBox {
     private Hand scissors = new Hand("scissors");
     private Hand paper = new Hand("paper");
     private Hand lizard = new Hand("lizard");
+    private Hand spock = new Hand("spock");
 
     public GameBox() {
         rock.follow(rulesInOrder(beats(scissors), beats(lizard), tiedAgainst(rock), looseAgainstAll()));
         scissors.follow(rulesInOrder(beats(paper), tiedAgainst(scissors), looseAgainstAll()));
         paper.follow(rulesInOrder(beats(rock), tiedAgainst(paper), looseAgainstAll()));
+        spock.follow(rulesInOrder(beats(lizard)));
     }
 
     public Shape rock() {
@@ -32,5 +34,9 @@ public class GameBox {
 
     public Shape lizard() {
         return lizard;
+    }
+
+    public Shape spock() {
+        return spock;
     }
 }
