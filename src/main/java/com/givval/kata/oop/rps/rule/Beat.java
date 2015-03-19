@@ -3,15 +3,15 @@ package com.givval.kata.oop.rps.rule;
 import com.givval.kata.oop.rps.Result;
 import com.givval.kata.oop.rps.Shape;
 
-public class Beats implements Rule {
+public class Beat implements Rule {
 
     private final Shape aOponent;
 
-    public static Rule beats(Shape aOponent) {
-        return new Beats(aOponent);
+    public static Rule beat(Shape aOponent) {
+        return new Beat(aOponent);
     }
 
-    private Beats(Shape aOponent) {
+    private Beat(Shape aOponent) {
         this.aOponent = aOponent;
     }
 
