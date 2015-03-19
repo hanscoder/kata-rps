@@ -17,7 +17,7 @@ public class GameBox {
         rock.follow(rulesInOrder(beats(scissors), beats(lizard), tiedAgainst(rock), looseAgainstAll()));
         scissors.follow(rulesInOrder(beats(paper), tiedAgainst(scissors), looseAgainstAll()));
         paper.follow(rulesInOrder(beats(rock), tiedAgainst(paper), looseAgainstAll()));
-        spock.follow(rulesInOrder(beats(lizard), beats(rock), tiedAgainst(spock)));
+        spock.follow(rulesInOrder(beats(scissors), beats(rock), tiedAgainst(spock), looseAgainstAll()));
     }
 
     public Shape rock() {

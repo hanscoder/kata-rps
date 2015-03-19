@@ -35,6 +35,7 @@ We have additional rules:
 * Lizard beats paper.
 * Paper beats spock.
 * Spock beats rock.
+* Lizard beats spock.
 
 ### Goal
 

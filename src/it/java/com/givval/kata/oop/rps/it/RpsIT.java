@@ -84,8 +84,8 @@ public class RpsIT {
     }
 
     @Test
-    public void spock_beats_lizard() {
-        spock().tryToBeat(lizard(), result);
+    public void spock_beats_scissors() {
+        spock().tryToBeat(scissors(), result);
 
         verify(result).hasWon();
     }
@@ -102,6 +102,20 @@ public class RpsIT {
         spock().tryToBeat(spock(), result);
 
         verify(result).hasBeenTied();
+    }
+
+    @Test
+    public void spock_looses_against_lizard() {
+        spock().tryToBeat(lizard(), result);
+
+        verify(result).hasLost();
+    }
+
+    @Test
+    public void spock_looses_against_paper() {
+        spock().tryToBeat(paper(), result);
+
+        verify(result).hasLost();
     }
 
     private Shape spock() {
