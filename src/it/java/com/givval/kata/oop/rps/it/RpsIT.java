@@ -90,6 +90,20 @@ public class RpsIT {
         verify(result).hasWon();
     }
 
+    @Test
+    public void spock_beats_rock() {
+        spock().tryToBeat(rock(), result);
+
+        verify(result).hasWon();
+    }
+
+    @Test
+    public void spock_against_spock_leads_to_a_tied_game() {
+        spock().tryToBeat(spock(), result);
+
+        verify(result).hasBeenTied();
+    }
+
     private Shape spock() {
         return box.spock();
     }
