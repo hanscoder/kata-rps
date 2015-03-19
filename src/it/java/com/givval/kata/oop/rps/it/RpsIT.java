@@ -1,6 +1,6 @@
 package com.givval.kata.oop.rps.it;
 
-import com.givval.kata.oop.rps.GameBox;
+import com.givval.kata.oop.rps.ShapeSelection;
 import com.givval.kata.oop.rps.Result;
 import com.givval.kata.oop.rps.Shape;
 import org.junit.Test;
@@ -10,7 +10,7 @@ import static org.mockito.Mockito.verify;
 
 public class RpsIT {
 
-    private GameBox box = new GameBox();
+    private ShapeSelection select = new ShapeSelection();
     private Result result = Mockito.mock(Result.class);
 
     @Test
@@ -168,22 +168,22 @@ public class RpsIT {
     }
 
     private Shape spock() {
-        return box.spock();
+        return select.spock();
     }
 
     private Shape lizard() {
-        return box.lizard();
+        return select.lizard();
     }
 
     private Shape rock() {
-        return box.rock();
+        return select.rock();
     }
 
     private Shape paper() {
-        return box.paper();
+        return select.paper();
     }
 
     private Shape scissors() {
-        return box.scissors();
+        return select.scissors();
     }
 }

@@ -5,7 +5,7 @@ import static com.givval.kata.oop.rps.rule.LooseAgainstAll.looseAgainstTheRest;
 import static com.givval.kata.oop.rps.rule.RulesInOrder.rulesInOrder;
 import static com.givval.kata.oop.rps.rule.TiedAgainst.tiedAgainst;
 
-public class GameBox {
+public class ShapeSelection {
 
     private final Hand rock = new Hand("rock");
     private final Hand scissors = new Hand("scissors");
@@ -13,7 +13,7 @@ public class GameBox {
     private final Hand lizard = new Hand("lizard");
     private final Hand spock = new Hand("spock");
 
-    public GameBox() {
+    public ShapeSelection() {
         rock.follow(rulesInOrder(beats(scissors), beats(lizard), tiedAgainst(rock), looseAgainstTheRest()));
         scissors.follow(rulesInOrder(beats(paper), beats(lizard), tiedAgainst(scissors), looseAgainstTheRest()));
         paper.follow(rulesInOrder(beats(rock), beats(spock), tiedAgainst(paper), looseAgainstTheRest()));
