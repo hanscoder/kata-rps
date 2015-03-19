@@ -1,6 +1,9 @@
 package com.givval.kata.oop.rps;
 
+import com.givval.kata.oop.rps.rule.DoNothing;
 import com.givval.kata.oop.rps.rule.Rule;
+
+import static com.givval.kata.oop.rps.rule.DoNothing.doNothing;
 
 class Hand implements Shape {
 
@@ -20,15 +23,6 @@ class Hand implements Shape {
         rule.evaluate(oponent, result);
     }
 
-    private Rule doNothing() {
-        return new Rule() {
-            @Override
-            public void evaluate(Shape oponent, Result result) {
-                // donnothing
-            }
-        };
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -45,4 +39,5 @@ class Hand implements Shape {
     public int hashCode() {
         return name != null ? name.hashCode() : 0;
     }
+
 }
