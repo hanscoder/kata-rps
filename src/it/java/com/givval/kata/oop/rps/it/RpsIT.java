@@ -76,6 +76,17 @@ public class RpsIT {
         verify(result).hasLost();
     }
 
+    @Test
+    public void rock_beats_lizard() {
+        rock().tryToBeat(lizard(), result);
+
+        verify(result).hasWon();
+    }
+
+    private Shape lizard() {
+        return box.lizard();
+    }
+
     private Shape rock() {
         return box.rock();
     }
