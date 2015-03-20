@@ -4,7 +4,7 @@ import com.givval.kata.oop.rps.Result;
 import com.givval.kata.oop.rps.Shape;
 import com.givval.kata.oop.rps.rule.Rule;
 
-public class DoNothing implements Rule {
+public class DoNothing implements Rule<Result> {
 
     private static DoNothing doNothing = new DoNothing();
 

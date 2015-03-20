@@ -1,10 +1,5 @@
 package com.givval.kata.oop.rps;
 
-public interface Result {
+public interface Result extends Win, Tied, Lost {
 
-    void hasBeenTied();
-
-    void hasWon();
-
-    void hasLost();
 }

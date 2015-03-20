@@ -3,7 +3,7 @@ package com.givval.kata.oop.rps.rule;
 import com.givval.kata.oop.rps.Result;
 import com.givval.kata.oop.rps.Shape;
 
-public class RulesInOrder implements Rule {
+public class RulesInOrder implements Rule<Result> {
     private final Rule[] rules;
 
     public static Rule rulesInOrder(Rule... rules) {

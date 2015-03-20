@@ -2,8 +2,9 @@ package com.givval.kata.oop.rps.rule;
 
 import com.givval.kata.oop.rps.Result;
 import com.givval.kata.oop.rps.Shape;
+import com.givval.kata.oop.rps.Win;
 
-public class Beat implements Rule {
+public class Beat implements Rule<Win> {
 
     private final Shape aOponent;
 
@@ -16,7 +17,7 @@ public class Beat implements Rule {
     }
 
     @Override
-    public void evaluate(Shape oponent, Result result) {
+    public void evaluate(Shape oponent, Win result) {
         if (aOponent.equals(oponent)) {
             result.hasWon();
         }
