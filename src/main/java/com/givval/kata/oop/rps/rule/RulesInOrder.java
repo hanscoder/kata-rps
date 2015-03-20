@@ -15,9 +15,9 @@ public class RulesInOrder implements Rule<Result> {
     }
 
     @Override
-    public void evaluate(Shape oponent, Result result) {
+    public void evaluate(Shape opponent, Result result) {
         for (Rule rule : rules) {
-            rule.evaluate(oponent, result);
+            rule.evaluate(opponent, result);
         }
     }
 }

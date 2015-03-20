@@ -13,7 +13,7 @@ public class DoNothing implements Rule<Result> {
     }
 
     @Override
-    public void evaluate(Shape oponent, Result result) {
+    public void evaluate(Shape opponent, Result result) {
         // do nothing
     }
 }

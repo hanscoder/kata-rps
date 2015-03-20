@@ -11,7 +11,7 @@ public class LooseAgainstAll implements Rule<Lost> {
     }
 
     @Override
-    public void evaluate(Shape oponent, Lost result) {
+    public void evaluate(Shape opponent, Lost result) {
         result.hasLost();
     }
 }

@@ -7,17 +7,17 @@ public class Beat implements Rule<Win> {
 
     private final Shape looser;
 
-    public static Rule beat(Shape oponent) {
-        return new Beat(oponent);
+    public static Rule beat(Shape opponent) {
+        return new Beat(opponent);
     }
 
-    private Beat(Shape oponent) {
-        this.looser = oponent;
+    private Beat(Shape opponent) {
+        this.looser = opponent;
     }
 
     @Override
-    public void evaluate(Shape oponent, Win result) {
-        if (looser.equals(oponent)) {
+    public void evaluate(Shape opponent, Win result) {
+        if (looser.equals(opponent)) {
             result.hasWon();
         }
     }

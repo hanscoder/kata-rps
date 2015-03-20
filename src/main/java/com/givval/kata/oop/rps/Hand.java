@@ -19,8 +19,8 @@ class Hand implements Shape {
     }
 
     @Override
-    public void tryToBeat(Shape oponent, Result result) {
-        rule.evaluate(oponent, result);
+    public void tryToBeat(Shape opponent, Result result) {
+        rule.evaluate(opponent, result);
     }
 
     @Override
