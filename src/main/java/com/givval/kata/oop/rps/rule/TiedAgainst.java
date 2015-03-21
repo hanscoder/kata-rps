@@ -17,7 +17,7 @@ public class TiedAgainst implements Rule<Tied> {
     @Override
     public void evaluate(Shape opponent, Tied result) {
         if (equalOpponent.equals(opponent)) {
-            result.hasBeenTied();
+            result.isTied();
         }
     }
 }

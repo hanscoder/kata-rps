@@ -17,7 +17,7 @@ public class RpsIT {
     public void rock_against_rock_leads_to_a_tied_game() {
         rock().tryToBeat(rock(), result);
 
-        verify(result).hasBeenTied();
+        verify(result).isTied();
     }
 
     @Test
@@ -52,7 +52,7 @@ public class RpsIT {
     public void scissors_against_scissors_leads_to_a_tied_game() {
         scissors().tryToBeat(scissors(), result);
 
-        verify(result).hasBeenTied();
+        verify(result).isTied();
     }
 
     @Test
@@ -80,7 +80,7 @@ public class RpsIT {
     public void paper_against_paper_leads_to_a_tied_game() {
         paper().tryToBeat(paper(), result);
 
-        verify(result).hasBeenTied();
+        verify(result).isTied();
     }
 
     @Test
@@ -115,7 +115,7 @@ public class RpsIT {
     public void spock_against_spock_leads_to_a_tied_game() {
         spock().tryToBeat(spock(), result);
 
-        verify(result).hasBeenTied();
+        verify(result).isTied();
     }
 
     @Test
@@ -143,7 +143,7 @@ public class RpsIT {
     public void lizard_against_lizard_leads_to_a_tied_game() {
         lizard().tryToBeat(lizard(), result);
 
-        verify(result).hasBeenTied();
+        verify(result).isTied();
     }
 
     @Test
