@@ -3,14 +3,14 @@ package com.givval.kata.oop.rps.rule;
 import com.givval.kata.oop.rps.Result;
 import com.givval.kata.oop.rps.Shape;
 
-public class RulesInOrder implements Rule<Result> {
+public class InOrder implements Rule<Result> {
     private final Rule[] rules;
 
-    public static Rule rulesInOrder(Rule... rules) {
-        return new RulesInOrder(rules);
+    public static Rule inOrder(Rule... rules) {
+        return new InOrder(rules);
     }
 
-    private RulesInOrder(Rule... rules) {
+    private InOrder(Rule... rules) {
         this.rules = rules;
     }
 

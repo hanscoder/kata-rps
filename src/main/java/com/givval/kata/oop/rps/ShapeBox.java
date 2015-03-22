@@ -2,7 +2,7 @@ package com.givval.kata.oop.rps;
 
 import static com.givval.kata.oop.rps.rule.Beat.beat;
 import static com.givval.kata.oop.rps.rule.LooseAgainstAll.looseAgainstTheRest;
-import static com.givval.kata.oop.rps.rule.RulesInOrder.rulesInOrder;
+import static com.givval.kata.oop.rps.rule.InOrder.inOrder;
 import static com.givval.kata.oop.rps.rule.TiedAgainst.tiedAgainst;
 
 public class ShapeBox {
@@ -18,11 +18,11 @@ public class ShapeBox {
     }
 
     private void explainRulesToHands() {
-        rock.follow(rulesInOrder(beat(scissors), beat(lizard), tiedAgainst(rock), looseAgainstTheRest()));
-        scissors.follow(rulesInOrder(beat(paper), beat(lizard), tiedAgainst(scissors), looseAgainstTheRest()));
-        paper.follow(rulesInOrder(beat(rock), beat(spock), tiedAgainst(paper), looseAgainstTheRest()));
-        spock.follow(rulesInOrder(beat(scissors), beat(rock), tiedAgainst(spock), looseAgainstTheRest()));
-        lizard.follow(rulesInOrder(beat(paper), beat(spock), tiedAgainst(lizard), looseAgainstTheRest()));
+        rock.follow(inOrder(beat(scissors), beat(lizard), tiedAgainst(rock), looseAgainstTheRest()));
+        scissors.follow(inOrder(beat(paper), beat(lizard), tiedAgainst(scissors), looseAgainstTheRest()));
+        paper.follow(inOrder(beat(rock), beat(spock), tiedAgainst(paper), looseAgainstTheRest()));
+        spock.follow(inOrder(beat(scissors), beat(rock), tiedAgainst(spock), looseAgainstTheRest()));
+        lizard.follow(inOrder(beat(paper), beat(spock), tiedAgainst(lizard), looseAgainstTheRest()));
     }
 
     public Shape rock() {
