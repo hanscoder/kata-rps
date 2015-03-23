@@ -5,10 +5,12 @@ import com.givval.kata.oop.rps.Win;
 
 public class Beat implements Rule<Win> {
 
+    private static Beat beat;
     private final Shape looser;
 
     public static Rule beat(Shape opponent) {
-        return new Beat(opponent);
+        beat = new Beat(opponent);
+        return beat;
     }
 
     private Beat(Shape opponent) {

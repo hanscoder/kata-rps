@@ -6,8 +6,10 @@ import com.givval.kata.oop.rps.Shape;
 
 public class LooseAgainstAll implements Rule<Lost> {
 
+    private static final LooseAgainstAll looseAgainstAll = new LooseAgainstAll();
+
     public static Rule looseAgainstTheRest() {
-        return new LooseAgainstAll();
+        return looseAgainstAll;
     }
 
     @Override
