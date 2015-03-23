@@ -1,7 +1,7 @@
 package com.givval.kata.oop.rps.rule;
 
 import com.givval.kata.oop.rps.Shape;
-import com.givval.kata.oop.rps.Win;
+import com.givval.kata.oop.rps.result.Win;
 
 public class Beat implements Rule<Win> {
 

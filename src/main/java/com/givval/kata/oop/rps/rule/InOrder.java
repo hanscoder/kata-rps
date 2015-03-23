@@ -1,6 +1,6 @@
 package com.givval.kata.oop.rps.rule;
 
-import com.givval.kata.oop.rps.Result;
+import com.givval.kata.oop.rps.result.Result;
 import com.givval.kata.oop.rps.Shape;
 
 public class InOrder implements Rule<Result> {

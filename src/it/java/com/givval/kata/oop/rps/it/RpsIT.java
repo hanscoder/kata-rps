@@ -1,7 +1,7 @@
 package com.givval.kata.oop.rps.it;
 
 import com.givval.kata.oop.rps.ShapeBox;
-import com.givval.kata.oop.rps.Result;
+import com.givval.kata.oop.rps.result.Result;
 import com.givval.kata.oop.rps.Shape;
 import org.junit.Test;
 import org.mockito.Mockito;

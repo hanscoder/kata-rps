@@ -1,6 +1,6 @@
 package com.givval.kata.oop.rps;
 
-import com.givval.kata.oop.rps.rule.DoNothing;
+import com.givval.kata.oop.rps.result.Result;
 import com.givval.kata.oop.rps.rule.Rule;
 
 import static com.givval.kata.oop.rps.rule.DoNothing.doNothing;
