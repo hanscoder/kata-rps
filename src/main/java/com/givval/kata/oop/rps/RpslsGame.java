@@ -1,19 +1,18 @@
 package com.givval.kata.oop.rps;
 
 import static com.givval.kata.oop.rps.rule.Beat.beat;
-import static com.givval.kata.oop.rps.rule.LooseAgainstAll.looseAgainstTheRest;
 import static com.givval.kata.oop.rps.rule.InOrder.inOrder;
+import static com.givval.kata.oop.rps.rule.LooseAgainstAll.looseAgainstTheRest;
 import static com.givval.kata.oop.rps.rule.TiedAgainst.tiedAgainst;
 
-public class ShapeBox {
-
+public class RpslsGame {
     private final Hand rock = new Hand("rock");
     private final Hand scissors = new Hand("scissors");
     private final Hand paper = new Hand("paper");
     private final Hand lizard = new Hand("lizard");
     private final Hand spock = new Hand("spock");
 
-    public ShapeBox() {
+    public RpslsGame() {
         explainRulesToHands();
     }
 
